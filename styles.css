@@ -12,18 +12,23 @@
 body {
   min-height: 100vh;
   display: flex;
-  justify-content: center; /* center main horizontally */
+  /* center main horizontally */
+  justify-content: center;
   background: #f4f5fb;
-  color: #111;
+  color: #080b12;
 }
 
 main {
   display: flex;
-  flex-direction: column;  /* STACK elements vertically */
-  align-items: center;     /* center items horizontally */
-  gap: 1rem;               /* space between elements */
+  /* STACK elements vertically */
+  flex-direction: column;
+  /* center items horizontally */
+  align-items: center;
+  /* space between elements */
+  gap: 1.5rem;
   width: 100%;
-  max-width: 60%;        /* nice app width */
+  /* nice app width */
+  max-width: 60%;
   padding: 4rem 2rem;
 }
 
@@ -33,37 +38,143 @@ main {
 }
 
 .go-back {
-  align-self: flex-start;   /* move to the left inside flex column */
-
-  background: none;         /* remove button background */
-  border: none;             /* remove border */
+  color: #a52c6b;
+  /* move to the left inside flex column */
+  align-self: flex-start;
+  gap: 10px;
   padding: 0;
-
-  color: #555;
-  font: inherit;            /* keep same font as page */
+  font: inherit;
   cursor: pointer;
+  display: inline-flex;
   text-decoration: none;
 }
 
-.main-title{
-  align-self: flex-start;   /* move to the left inside flex column */
-  font: inherit;            /* keep same font as page */
+.go-back:hover {
+  color: #7c1d4f;
+}
+
+.main-title {
+  /* move to the left inside flex column */
+  align-self: flex-start;
+  font: inherit;
   font-weight: bold;
   size: 24px;
-
 }
 
 .input-group {
   display: flex;
   width: 100%;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .input-group input {
-  flex: 1; /* takes remaining space */
+  flex: 1;
+  /* takes remaining space */
   padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.input-group input:hover {
+  border: 1.5px solid #b9c2d0;
+}
+
+.input-group input:focus {
+  border-color: #a52c6b;
+  box-shadow: 0 0 0 2px rgba(165, 44, 107, 0.2);
+}
+
+input::placeholder {
+  opacity: 0.5;
 }
 
 .input-group button {
   padding: 0.6rem 1rem;
+  background-color: #ca3884;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  width: 20%;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  transform: scale(1.05);
+  background-color: #a52c6b;
+}
+
+
+.list {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list input {
+  cursor: pointer;
+}
+
+/*.list input:checked+span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}*/
+
+.list i {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.item-removed {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  color: #fff;
+  background-color: #c93847;
+  font: inherit;
+  display: inline-flex;
+  border-radius: 8px;
+  gap: 10px;
+}
+
+.item-removed i:last-child {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.delete-btn,
+.close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.delete-btn:hover,
+.close-btn:hover {
+  opacity: 0.7;
 }

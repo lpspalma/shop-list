@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.hugeicons.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Shop List</title>
@@ -25,16 +26,58 @@
         </a>
         <h1 class="main-title">Groceries to buy</h1>
         <div class="input-group">
-            <input type="text" name="item" id="item" />
-            <button type="input">Add</button>
+            <input type="text" name="item" placeholder="Add new item" id="item" />
+            <button type="submit">Add</button>
         </div>
-        <div>
+        <div class="list">
             <ul>
-                <li>Pao de Forma</li>
-                <li>Cafe</li>
-                <li>Suco de Laranja</li>
-                <li>Bolacha</li>
+                <li>
+                    <label>
+                        <input type="checkbox" />
+                        <span class="item-text">Pão de Forma</span>
+                        </i><button class="delete-btn">
+                            <i class="hgi hgi-stroke hgi-delete-02"></i>
+                        </button>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" />
+                        <span class="item-text">Café</span>
+                        <button class="delete-btn">
+                            <i class="hgi hgi-stroke hgi-delete-02"></i>
+                        </button>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" />
+                        <span class="item-text">Suco de Laranja</span>
+                        <button class="delete-btn">
+                            <i class="hgi hgi-stroke hgi-delete-02"></i>
+                        </button>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" />
+                        <span class="item-text">Bolacha</span>
+                        <button class="delete-btn">
+                            <i class="hgi hgi-stroke hgi-delete-02"></i>
+                        </button>
+                    </label>
+                </li>
             </ul>
+        </div>
+        <div class="item-removed">
+            <i class="hgi hgi-stroke hgi-alert-circle"></i>
+            <span>Item removed from the list</span>
+            <button class="close-btn">
+                <i class="hgi hgi-stroke hgi-cancel-01"></i>
+            </button>
         </div>
 
 
